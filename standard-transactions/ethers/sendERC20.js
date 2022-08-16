@@ -1,4 +1,5 @@
 const ethers = require("ethers");
+require("dotenv").config();
 
 //Code taken from "https://www.web3byexample.com/transferring-erc20"
 
@@ -16,9 +17,7 @@ const ethers = require("ethers");
     "event Transfer(address indexed from, address indexed to, uint amount)",
   ];
 
-  console.log(abi); //added by Ronan
-
-  const usdc = "0x07865c6E87B9F70255377e024ace6630C1Eaa37F"; //updated by Ronan to Goerli USDC address
+  const usdc = "0x07865c6E87B9F70255377e024ace6630C1Eaa37F"; //updated by Ronan to Goerli USDC
   const usdcDecimals = 6;
   const network = process.env.ETHEREUM_NETWORK;
   const provider =  new ethers.providers.InfuraProvider(
